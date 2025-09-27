@@ -1,9 +1,21 @@
-import {useState} from 'react';
+import MovieCard from "./MovieCard";
 
-const MovieList = () => {
-    <div>
+function MovieList ({movies, onSelect, favorites = [], toggleFavorite}) {
 
-    </div>
+    return (
+        <div className = "movie-list">
+        {movies.map(m => (
+            <MovieCard
+                key = {m.imdbID}
+                movie = {m}
+                onSelect = {onSelect}
+                isFavorite = {favorites.some(f => f.imdbID === m.imdbID)}
+                toggleFavorite = {toggleFavorite}>               
+            </MovieCard>
+        ))}
+        </div>
+    )
+    
 }
 
 export default MovieList;
