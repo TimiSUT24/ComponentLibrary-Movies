@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 
-function MovieDetails ({imdbID, onClose}) {
+function MovieDetails ({imdbID}) {
     const [details, setDetails] = useState(null)
     const apiKey = import.meta.env.VITE_API_KEY
 
@@ -24,7 +24,6 @@ function MovieDetails ({imdbID, onClose}) {
             <p><strong>Plot:</strong> {details.Plot}</p>
         </div>
     )
-
 
 }
 

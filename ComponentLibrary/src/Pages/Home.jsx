@@ -5,7 +5,6 @@ import Favorites from '../Components/FavoriteList';
 
 function HomePage ({favorites, setFavorite})  {  
     const [movies, setMovies] = useState([]);
-    const [selected, setSelected] = useState(null);
     const apiKey = import.meta.env.VITE_API_KEY
 
     const searchMovies = (query) => {
@@ -27,8 +26,7 @@ function HomePage ({favorites, setFavorite})  {
         <div>
         <SearchInput onSearch = {searchMovies}></SearchInput>
         <MovieList
-            movies = {movies}
-            onSelect = {setSelected}
+            movies = {movies}           
             favorites = {favorites}
             toggleFavorite = {toggleFavorite}>           
         </MovieList>
