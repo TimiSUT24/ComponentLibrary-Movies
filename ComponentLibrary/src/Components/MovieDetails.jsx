@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 
 function MovieDetails ({imdbID}) {
     const [details, setDetails] = useState(null)

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './Pages/Home'
 import useFavorites from './Hooks/useFavorites'
+import MoviePage from './Pages/MoviePage'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     </nav>
     <Routes>
       <Route path="/" element={<HomePage favorites={favorites} setFavorite={setFavorite} />}></Route>    
+      <Route path="/movie/:imdbID" element={<MoviePage/>}></Route>
     </Routes>  
     </BrowserRouter>
   )
