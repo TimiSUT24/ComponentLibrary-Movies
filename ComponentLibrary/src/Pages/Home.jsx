@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react';
+import {useState} from 'react';
 import SearchInput from '../Components/Search';
 import MovieList from '../Components/MovieList';
 import Favorites from '../Components/FavoriteList';

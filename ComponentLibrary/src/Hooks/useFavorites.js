@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
 function useFavorites (){
-    const [favorites, setFavorites] = useState(
+    const [favorites, setFavorite] = useState(
         () => JSON.parse(localStorage.getItem('favorites')) || []
     )
 
@@ -9,7 +9,7 @@ function useFavorites (){
         localStorage.setItem('favorites', JSON.stringify(favorites)); 
     }, [favorites])
 
-    return [favorites, setFavorites];
+    return [favorites, setFavorite];
 }
 
 export default useFavorites
