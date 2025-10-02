@@ -2,6 +2,7 @@ import {useState} from 'react';
 import SearchInput from '../Components/Search';
 import MovieList from '../Components/MovieList';
 import Favorites from '../Components/FavoriteList';
+import '../CSS/HomePage.css'
 
 function HomePage ({favorites, setFavorite})  {  
     const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ function HomePage ({favorites, setFavorite})  {
     
 
     return (
-        <div>
+        <div className ="home-page">
         <SearchInput onSearch = {searchMovies}></SearchInput>
         <MovieList
             movies = {movies}           
