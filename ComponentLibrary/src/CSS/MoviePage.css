@@ -1,0 +1,43 @@
+.movie-details{
+    display:grid;
+    grid-template-areas: 
+    "img header" 
+    "img desc"         
+    "link link";
+    gap:20px;
+
+}
+
+.movie-details img{
+    grid-area:img;
+    display:flex;
+    flex-direction: row;
+}
+
+.movie-details a{
+    grid-area:link;
+    background-color: blueviolet;
+    border-color: blueviolet;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color:white;
+}
+
+.movie-details h1{
+    grid-area:header;
+    display:flex;
+    flex-direction: row;
+    font-size: 40px;
+    height:100px;
+}
+
+.p-tags p{
+    grid-area:desc;
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+

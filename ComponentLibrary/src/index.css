@@ -10,7 +10,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:mediumslateblue;
+  background: linear-gradient(180deg, #2a1f4a 0%, #3d2f5f 50%, #2a1f4a 100%);
 }
 
 a {

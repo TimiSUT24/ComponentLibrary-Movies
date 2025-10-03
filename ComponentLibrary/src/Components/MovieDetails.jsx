@@ -16,13 +16,16 @@ function MovieDetails ({imdbID}) {
     }
 
     return(
-        <div className ="movie-details">
-            <Link to="/">Back</Link>
-            <h1>{details.Title} ({details.Year})</h1>
+        <div className ="movie-details">                                       
             <img src={details.Poster} alt={details.Title} />
-            <p><strong>Director:</strong> {details.Director}</p>
-            <p><strong>Actors:</strong> {details.Actors}</p>
-            <p><strong>Plot:</strong> {details.Plot}</p>
+            <h1>{details.Title} ({details.Year})</h1>
+            <div className ="p-tags">
+            <p className ="p1"><strong>Director:</strong> {details.Director}</p>
+            <p className ="p2"><strong>Actors:</strong> {details.Actors}</p>
+            <p className ="p3"><strong>Plot:</strong> {details.Plot}</p>
+            </div>
+
+            <Link to="/">Back</Link>
         </div>
     )
 
