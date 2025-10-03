@@ -1,7 +1,7 @@
 
 function Favorites ({favorites = [], removeFavorite}){
     return(
-        <div className = "favorites">
+        <div className = "favorite">
             <h2>Favorites</h2>
             {favorites.length === 0 && <p>No favorites</p>}
             {favorites.map(m => (

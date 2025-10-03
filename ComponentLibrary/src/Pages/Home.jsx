@@ -6,6 +6,7 @@ import '../CSS/HomePage.css'
 
 function HomePage ({favorites, setFavorite})  {  
     const [movies, setMovies] = useState([]);
+    const [showFavorites, setShowFavorites] = useState(false);
     const apiKey = import.meta.env.VITE_API_KEY
 
     const searchMovies = (query) => {
@@ -25,18 +26,30 @@ function HomePage ({favorites, setFavorite})  {
 
     return (
         <div className ="home-page">
-        <SearchInput onSearch = {searchMovies}></SearchInput>
-        <MovieList
-            movies = {movies}           
-            favorites = {favorites}
-            toggleFavorite = {toggleFavorite}>           
-        </MovieList>
-
+        <button 
+          className="favorites-toggle" 
+          onClick={() => setShowFavorites(!showFavorites)}
+        >
+          {showFavorites ? "Close Favorites" : "Show Favorites"}
+        </button>
+        <div className ={`favorites ${showFavorites ? "open" : ""}`}>
         <Favorites
         favorites = {favorites}
         removeFavorite = {id => setFavorite(favorites.filter(f => f.imdbID !== id))}>   
         </Favorites>
         </div>
+
+        <div className ="main-content">
+            <h1>MoviePop</h1>
+            <SearchInput onSearch = {searchMovies}></SearchInput>
+
+            <MovieList
+            movies = {movies}           
+            favorites = {favorites}
+            toggleFavorite = {toggleFavorite}>           
+            </MovieList>
+        </div>                  
+    </div>
     )
 }
 

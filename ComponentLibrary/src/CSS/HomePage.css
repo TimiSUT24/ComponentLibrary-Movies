@@ -1,13 +1,33 @@
+.home-page{
+    display:grid;
+    grid-template-areas:
+    "navbar navbar"
+    "main main";
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    width:1280px;
+    background-color: mediumslateblue;
+}
 
+.main-content{
+    grid-area: main;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:30rem;
+}
 
 .nav-tab {
-  display: flex;
-  align-items: center; 
-  justify-content: end; 
-  padding-bottom:25rem;      
-  gap:10px;             
-  height: 60px;                  
+  grid-area:navbar;
+  display:flex;
+  justify-content: center;
+  align-items: center;       
+  gap:10px;                              
   color: white;
+  padding-left:30rem;
+  background-color: mediumslateblue;
 }
 
 .nav-tab a {
@@ -20,9 +40,7 @@
     color: #c9a0ff;       
 }
 
-.search-container{
-    position: absolute;
-    top:20rem;
+.search-container{      
     display:flex;
     place-self: center;   
 
@@ -49,45 +67,90 @@
     background-color: rgb(107, 85, 235);
 }
 
-.favorites{
-    position:absolute;
-    place-self: center;
-    display:flex;
-    flex-direction: column;
-    top:0;
-    left:10rem;
-    gap:1rem;
+
+.favorites {
+    position: fixed;
+    top: 0;
+    left: -300px; 
+    width: 280px;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 2rem 1rem;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 2000; 
 }
 
-.favorites button{
-    font-size: 11px;
-    height:30px;
-    margin-left:10px;
+.favorites.open {
+    left: 0; 
+}
+
+
+.favorites-toggle {
+    background: rgb(107, 85, 235);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width:200px;
+    margin-left:4rem;
+    margin-top:50px;
+}
+
+.favorites-toggle:hover {
+    background: rgb(89, 70, 210);
+}
+
+.favorite{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+}
+
+.favo-item{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
 }
 
 .movie-list{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 50px;
+    row-gap: 40px;
+    padding-top:5rem;
 }
 .movie-card {
-    width: 390px; 
+    width: 300px; 
 }
 
 .movie-card img {
-    width:350px;   
+    width:250px;   
     height:350px;    
     border-radius: 8px; 
 }
 
 .movie-card h3{
-    font-size: 15px;
+    font-size: 12px;   
+    justify-self:center;
 }
 
 .movie-card button{
     margin-left:50px;
+    background-color: rgb(107, 85, 235);
 }
 
 .movie-card a{
     color:white;
+}
+
+.home-page h1{
+    display:flex;
+    font-size: 30px;
+    place-self:center;
+    top:14rem;
 }
