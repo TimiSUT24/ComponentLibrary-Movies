@@ -43,7 +43,6 @@
 .search-container{      
     display:flex;
     place-self: center;   
-
 }
 .search-container input{
     flex:1;

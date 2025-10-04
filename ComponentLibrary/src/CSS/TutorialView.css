@@ -1,0 +1,74 @@
+
+.tutorials{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    gap:20px;
+}
+
+.tutorials li{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: rgb(3, 4, 7);
+    padding:20px;
+    width:1000px;
+    border-style:solid;
+    border-color: grey;
+    border-width: 1px;
+}
+
+.tutorials p{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left:10rem;
+}
+
+.presentation{
+    display:flex;
+    flex-direction: column;
+    margin-right:12rem;
+}
+.presentations{
+    margin-left:200px;
+    margin-right:200px;
+}
+
+.p-tags p{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:1rem;
+}
+.code-example{
+    background-color: rgb(59, 59, 59);
+    width:700px;
+    height:300px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    justify-self: center;
+}
+
+.code-example p{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:5px;
+    white-space:pre-line;
+    margin-left:1rem;
+    
+}
+
+.yellow-text{
+    color:yellow
+}
+
+.favorites-tutorial button{
+    margin-top:1rem;
+}
